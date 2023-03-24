@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b17cc10d883c64b862cd92f8104e3b, type: 3}
+  m_Name: Recipes_Jewel
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 1c595ec45cc29564c95e50863b7f245d, type: 2}
+    - {fileID: 11400000, guid: dc48bd76983ebfa448b2141c409aea73, type: 2}
+    - {fileID: 11400000, guid: b84922c823fbaff4abb1051968e911c3, type: 2}
+    - {fileID: 11400000, guid: 8f6b7b4d1225edf44971232453ef4964, type: 2}
+    - {fileID: 11400000, guid: 2292d5417db066d459248758be7926f1, type: 2}
+    - {fileID: 11400000, guid: b1fceca06b54d51448f03d58b15e34c4, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: _interactables
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Interactable, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

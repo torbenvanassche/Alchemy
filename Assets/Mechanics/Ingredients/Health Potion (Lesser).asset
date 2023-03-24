@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2254183c57ce60346847eb09a3a6868b, type: 3}
+  m_Name: Health Potion (Lesser)
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  onValidColor: {r: 0.854902, g: 0.45098042, b: 0.3921569, a: 1}
+  productStorage: {fileID: 11400000, guid: 16c2b70556e27b444b681b2f16df7e6e, type: 2}
+  description: 
+  ingredients:
+  - {fileID: 11400000, guid: 69d5f1642b290dd40ab028ee98746e18, type: 2}
+  - {fileID: 11400000, guid: 16c2b70556e27b444b681b2f16df7e6e, type: 2}
