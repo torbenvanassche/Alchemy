@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2254183c57ce60346847eb09a3a6868b, type: 3}
+  m_Script: {fileID: 11500000, guid: edac095dd62ee224585fda6799caf524, type: 3}
   m_Name: Health Potion (Lesser)
   m_EditorClassIdentifier: 
   serializationData:
@@ -21,9 +21,6 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  onValidColor: {r: 0.854902, g: 0.45098042, b: 0.3921569, a: 1}
-  productStorage: {fileID: 11400000, guid: 16c2b70556e27b444b681b2f16df7e6e, type: 2}
+  onValidColor: {r: 1, g: 1, b: 1, a: 1}
   description: 
-  ingredients:
-  - {fileID: 11400000, guid: 69d5f1642b290dd40ab028ee98746e18, type: 2}
-  - {fileID: 11400000, guid: 16c2b70556e27b444b681b2f16df7e6e, type: 2}
+  ingredients: []

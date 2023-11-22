@@ -6,34 +6,30 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Alkemik/RecipeBook", fileName = "recipes")]
 public class RecipeBook : SerializedScriptableObject
 { 
-    [SerializeField] private IEnumerable<Interactable> _interactables = new List<Interactable>();
-    private IEnumerable<InteractableReference> interactableReferences = new List<InteractableReference>();
+    [SerializeField] private IEnumerable<Item> _interactables = new List<Item>();
+    private IEnumerable<ItemReference> interactableReferences = new List<ItemReference>();
 
-    public List<Interactable> GetRecipes(List<Interactable> ingredients = null)
+    public List<Item> GetRecipes(Dictionary<Item, int> ingredients = null)
     {
-        if (!interactableReferences.Any())
+        if (ingredients.Count == 0)
         {
-            interactableReferences = FindObjectsOfType<InteractableReference>(true);
-        }
-        
-        if (ingredients == null)
-        {
+            //Create a copy so we don't remove data from our source container
             return _interactables.ToList();
         }
-        
-        List<Interactable> canCreate = new();
+
+        var returnValue = new List<Item>();
         foreach (var interactable in _interactables)
         {
-            if (interactable.GetRecipeState(ingredients) != Interactable.RecipeState.Invalid)
+            if (interactable.IsValid(ingredients))
             {
-                canCreate.Add(interactable);
+                returnValue.Add(interactable);
             }
         }
 
-        return canCreate;
+        return returnValue;
     }
 
-    public void FinishRecipe(Interactable interactable)
+    public void FinishRecipe(Item interactable)
     {
         var validRecipes = interactableReferences.Where(x => x.interactable == interactable);
         foreach (var interactableReference in validRecipes)

@@ -16,16 +16,12 @@ public class CustomInteractions : MonoBehaviour
 
     public void OnMouseEnter()
     {
-        HoverController.Instance.Draw(name);
-        HoverController.Instance.UpdatePosition(transform.position);
-
         if(_outline) _outline.enabled = true;
     }
 
     public void OnMouseExit()
     {
         if(_outline) _outline.enabled = false;
-        HoverController.Instance.Remove();
     }
 
     public void OnMouseUpAsButton()

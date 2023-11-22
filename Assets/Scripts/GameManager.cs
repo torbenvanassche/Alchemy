@@ -1,36 +1,40 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Utilities;
 
 public class GameManager : Singleton<GameManager>
 {
     public Cauldron _Cauldron = null;
 
-    private InteractableReference _ingredientReference = null;
-    public Color SelectedOutlineColor = Color.white;
-    public Color HoveredOutlineColor = Color.white;
+    private ItemReference _currentSelection = null;
+    
+    [Header("Outlines")]
+    public OutlineSettings SelectedOutline = null;
+    public OutlineSettings HoveredOutline = null;
 
-    public GameObject _shelf = null;
+    [SerializeField] private UIDocument runtimeUI = null;
+    [HideInInspector] public Tooltip Tooltip = null;
 
-    public InteractableReference IngredientReference
+    public ItemReference IngredientReference
     {
-        get => _ingredientReference;
+        get => _currentSelection;
         set
         {
-            if (_ingredientReference != value)
+            if (_currentSelection != value)
             {
-                if (_ingredientReference)
+                if (_currentSelection)
                 {
-                    _ingredientReference.OnDeselect();   
+                    _currentSelection.OnDeselect();
                 }
-                _ingredientReference = value;   
+
+                _currentSelection = value;
             }
         }
     }
 
-    public void Awake()
+    private void Awake()
     {
-        _shelf.GetComponent<Collider>().enabled = false;
+        Tooltip = new Tooltip(Camera.main, Color.white, 20, 5);
+        runtimeUI.rootVisualElement.Add(Tooltip);
     }
 }

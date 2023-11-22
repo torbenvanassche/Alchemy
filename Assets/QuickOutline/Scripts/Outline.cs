@@ -47,6 +47,14 @@ public class Outline : MonoBehaviour {
       needsUpdate = true;
     }
   }
+  
+  public bool Precompute {
+    get { return precomputeOutline; }
+    set {
+      precomputeOutline = value;
+      needsUpdate = true;
+    }
+  }
 
   [Serializable]
   private class ListVector3 {
@@ -112,7 +120,7 @@ public class Outline : MonoBehaviour {
     }
   }
 
-  void OnValidate() {
+  public void OnValidate() {
 
     // Update material properties
     needsUpdate = true;
